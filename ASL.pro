@@ -25,24 +25,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    vydacha_sdacha/dejurniy.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    vydacha_sdacha/dejurniy.h
 
 FORMS += \
         mainwindow.ui \
-    menu/menu.ui \
-    add_book/1_add_book(start).ui \
-    add_book/2_add_book(end).ui \
-    add_student/add_student.ui \
-    auth_form/auth_form.ui \
-    history_book/1_histori_books.ui \
-    history_book/2_hisotori_books.ui \
-    history_vidachi/books_for_ID.ui \
-    print_qr_code/print_QR_code.ui \
-    vydacha_sdacha/1_dejurniy.ui \
-    vydacha_sdacha/2_vvod_ID.ui \
-    vydacha_sdacha/3_action_with_QR_code.ui \
-    vydacha_sdacha/4_uslovie.ui \
-    vydacha_sdacha/QR_code_unread.ui
+    vydacha_sdacha/dejurniy.ui
