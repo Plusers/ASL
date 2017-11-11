@@ -15,6 +15,9 @@ public:
     explicit QR_code_unread(QWidget *parent = 0);
     ~QR_code_unread();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::QR_code_unread *ui;
 };

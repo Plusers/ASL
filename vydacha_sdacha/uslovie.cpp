@@ -19,3 +19,8 @@ void Uslovie::on_pushButton_2_clicked()
     this->accept();
 
 }
+
+void Uslovie::on_pushButton_clicked()
+{
+    accept();
+}

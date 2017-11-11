@@ -18,11 +18,12 @@ void Action_with_QR_code::on_pushButton_clicked()
 {
     auto usl = new Uslovie (this);
     usl->exec();
+    accept();
 }
 
 void Action_with_QR_code::on_pushButton_2_clicked()
 {
     auto usl1 = new QR_code_unread(this);
     usl1->exec();
-    accept();
+
 }

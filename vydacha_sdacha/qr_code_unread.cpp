@@ -12,3 +12,8 @@ QR_code_unread::~QR_code_unread()
 {
     delete ui;
 }
+
+void QR_code_unread::on_pushButton_clicked()
+{
+    accept();
+}

@@ -15,14 +15,11 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLabel" name="label">
+    <widget class="QLineEdit" name="lineEdit">
      <property name="text">
       <string>введите полное название книги</string>
      </property>
     </widget>
-   </item>
-   <item>
-    <widget class="QLineEdit" name="lineEdit"/>
    </item>
    <item>
     <widget class="QLineEdit" name="lineEdit_2">

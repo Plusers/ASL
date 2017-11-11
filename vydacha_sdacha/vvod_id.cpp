@@ -17,4 +17,5 @@ void Vvod_ID::on_pushButton_clicked()
 {
     auto act = new Action_with_QR_code (this);
     act->exec();
+    accept();
 }

@@ -17,4 +17,5 @@ void Dejurniy::on_pushButton_clicked()
 {
     auto vvod = new Vvod_ID (this);
     vvod->exec();
+    accept();
 }
