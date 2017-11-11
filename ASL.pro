@@ -26,12 +26,24 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    vydacha_sdacha/dejurniy.cpp
+    vydacha_sdacha/dejurniy.cpp \
+    vydacha_sdacha/vvod_id.cpp \
+    vydacha_sdacha/action_with_qr_code.cpp \
+    vydacha_sdacha/uslovie.cpp \
+    vydacha_sdacha/qr_code_unread.cpp
 
 HEADERS += \
         mainwindow.h \
-    vydacha_sdacha/dejurniy.h
+    vydacha_sdacha/dejurniy.h \
+    vydacha_sdacha/vvod_id.h \
+    vydacha_sdacha/action_with_qr_code.h \
+    vydacha_sdacha/uslovie.h \
+    vydacha_sdacha/qr_code_unread.h
 
 FORMS += \
         mainwindow.ui \
-    vydacha_sdacha/dejurniy.ui
+    vydacha_sdacha/dejurniy.ui \
+    vydacha_sdacha/vvod_id.ui \
+    vydacha_sdacha/action_with_qr_code.ui \
+    vydacha_sdacha/uslovie.ui \
+    vydacha_sdacha/qr_code_unread.ui

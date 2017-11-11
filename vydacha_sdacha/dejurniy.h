@@ -15,6 +15,9 @@ public:
     explicit Dejurniy(QWidget *parent = 0);
     ~Dejurniy();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::Dejurniy *ui;
 };
