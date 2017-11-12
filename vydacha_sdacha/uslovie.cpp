@@ -22,5 +22,5 @@ void Uslovie::on_pushButton_2_clicked()
 
 void Uslovie::on_pushButton_clicked()
 {
-    accept();
+    this->accept();
 }

@@ -6,39 +6,33 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>305</width>
-    <height>281</height>
+    <width>171</width>
+    <height>218</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLineEdit" name="lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>57</y>
-     <width>173</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>             имя дежурного</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>120</y>
-     <width>173</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>админисратор</string>
-   </property>
-  </widget>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="text">
+        <string>             имя дежурного</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>админисратор</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

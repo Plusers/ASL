@@ -61,3 +61,8 @@ void MainWindow::on_pushButton_7_clicked()
     auto qr = new QR_code_unread(this);
     qr->exec();
 }
+
+void MainWindow::on_pushButton_8_clicked()
+{
+     close();
+}
