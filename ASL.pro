@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+CONFIG   += c++11 c++14
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -24,8 +25,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        main.cpp \
-        mainwindow.cpp \
+    main.cpp \
+    mainwindow.cpp \
     vydacha_sdacha/dejurniy.cpp \
     vydacha_sdacha/vvod_id.cpp \
     vydacha_sdacha/action_with_qr_code.cpp \
@@ -36,10 +37,13 @@ SOURCES += \
     list_of_students_book/info_from_id.cpp \
     add_new_student/new_student.cpp \
     History_of_book/book_history.cpp \
-    History_of_book/book_history_end.cpp
+    History_of_book/book_history_end.cpp \
+    models/stringtablemodel.cpp \
+    models/storagemodel.cpp \
+    models/service.cpp
 
 HEADERS += \
-        mainwindow.h \
+    mainwindow.h \
     vydacha_sdacha/dejurniy.h \
     vydacha_sdacha/vvod_id.h \
     vydacha_sdacha/action_with_qr_code.h \
@@ -50,10 +54,13 @@ HEADERS += \
     list_of_students_book/info_from_id.h \
     add_new_student/new_student.h \
     History_of_book/book_history.h \
-    History_of_book/book_history_end.h
+    History_of_book/book_history_end.h \
+    models/stringtablemodel.h \
+    models/storagemodel.h \
+    models/service.h
 
 FORMS += \
-        mainwindow.ui \
+    mainwindow.ui \
     vydacha_sdacha/dejurniy.ui \
     vydacha_sdacha/vvod_id.ui \
     vydacha_sdacha/action_with_qr_code.ui \
@@ -65,3 +72,9 @@ FORMS += \
     add_new_student/new_student.ui \
     History_of_book/book_history.ui \
     History_of_book/book_history_end.ui
+
+DISTFILES += \
+    README.md \
+    LICENSE \
+    Doxyfile \
+    .gitignore
