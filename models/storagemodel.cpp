@@ -1,8 +1,6 @@
 #include "models/storagemodel.h"
 #include "models/service.h"
 
-namespace RastStorage {
-
 const QByteArray StorageModel::defaultCodec = "UTF-8";
 
 StorageModel::StorageModel(const QString modelFilename)
@@ -240,6 +238,4 @@ QVector<QString> StorageModel::defauldRowValue() const {
         row[boolIndex] = "0";
     }
     return row;
-}
-
 }

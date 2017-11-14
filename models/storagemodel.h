@@ -7,8 +7,6 @@
 
 #include "models/stringtablemodel.h"
 
-namespace RastStorage {
-
 /*!
  * \brief класс расширяет StringTableModel для работы с файлами .csv в формате
  *      RastStorage
@@ -175,7 +173,5 @@ private: // functions
     //! остальных - пустую строку
     virtual QVector<QString> defauldRowValue() const override;
 };
-
-}
 
 #endif // CURRENTSTATEMODEL_H
