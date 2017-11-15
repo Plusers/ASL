@@ -78,9 +78,8 @@ void MainWindow::on_pushButton_8_clicked()
 
 void MainWindow::showDemo() {
     // Demo on storage model
-    auto priceModel = new StorageModel();
+    auto priceModel = std::make_unique<StorageModel>("./productModel.csv");
     priceModel->setObjectName("poductModel");
-    priceModel->setFileName("./productModel.csv");
     priceModel->setTitle("Модель списка товаров");
     QStringList headers = { "Name", "Count", "Price"};
     priceModel->setHeaderData(headers);
@@ -128,7 +127,7 @@ void MainWindow::showDemo() {
     dialog.setSizeGripEnabled(true);
 
     auto priceView = new QTableView(&dialog);
-    priceView->setModel(priceModel);
+    priceView->setModel(priceModel.get());
 
     auto buttons = new QDialogButtonBox(QDialogButtonBox::Ok, &dialog);
     connect(buttons, &QDialogButtonBox::accepted, &dialog, &QDialog::accept);
