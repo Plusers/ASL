@@ -33,6 +33,7 @@ private slots:
     void on_pushButton_8_clicked();
 private: // functions
     void showDemo();
+    void showQrEncode();
 private: // members
     Ui::MainWindow *ui;
 };

@@ -14,12 +14,16 @@
 #include <QTableView>
 #include <QMessageBox>
 
+#include <qrwidget.h>
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    showDemo();
+//    showDemo();
+    showQrEncode();
+
 }
 
 MainWindow::~MainWindow()
@@ -78,7 +82,7 @@ void MainWindow::on_pushButton_8_clicked()
 
 void MainWindow::showDemo() {
     // Demo on storage model
-    auto priceModel = std::make_unique<StorageModel>("./productModel.csv");
+    auto priceModel = new StorageModel("./productModel.csv");
     priceModel->setObjectName("poductModel");
     priceModel->setTitle("Модель списка товаров");
     QStringList headers = { "Name", "Count", "Price"};
@@ -145,4 +149,10 @@ void MainWindow::showDemo() {
     // дёрнуть show() и смотреть, как ваша модель меняется при ваших программных
     // действиях. Это удобно.
     dialog.exec();
+}
+
+void MainWindow::showQrEncode() {
+    QDialog dial(this);
+    auto qrwid = new QRWidget(&dial);
+    dial.exec();
 }

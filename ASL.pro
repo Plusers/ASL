@@ -12,6 +12,9 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = ASL
 TEMPLATE = app
 
+#LIBS += -lqrencode
+#unix:LIBS += -L"/usr/local/lib"
+
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which has been marked as deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -40,7 +43,8 @@ SOURCES += \
     History_of_book/book_history_end.cpp \
     models/stringtablemodel.cpp \
     models/storagemodel.cpp \
-    models/service.cpp
+    models/service.cpp \
+    qrwidget.cpp
 
 HEADERS += \
     mainwindow.h \
@@ -57,7 +61,9 @@ HEADERS += \
     History_of_book/book_history_end.h \
     models/stringtablemodel.h \
     models/storagemodel.h \
-    models/service.h
+    models/service.h \
+    qrwidget.h \
+#    /usr/local/include/qrencode.h
 
 FORMS += \
     mainwindow.ui \
@@ -78,3 +84,8 @@ DISTFILES += \
     LICENSE \
     Doxyfile \
     .gitignore
+
+macx: LIBS += -L$$PWD/../../../usr/local/Cellar/qrencode/4.0.0/lib/ -lqrencode.4
+
+INCLUDEPATH += $$PWD/../../../usr/local/include
+DEPENDPATH += $$PWD/../../../usr/local/include
