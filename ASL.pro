@@ -63,7 +63,6 @@ HEADERS += \
     models/storagemodel.h \
     models/service.h \
     qrwidget.h \
-#    /usr/local/include/qrencode.h
 
 FORMS += \
     mainwindow.ui \
@@ -85,7 +84,14 @@ DISTFILES += \
     Doxyfile \
     .gitignore
 
-macx: LIBS += -L$$PWD/../../../usr/local/Cellar/qrencode/4.0.0/lib/ -lqrencode.4
-
-INCLUDEPATH += $$PWD/../../../usr/local/include
-DEPENDPATH += $$PWD/../../../usr/local/include
+macx {
+#    LIBS += -L/usr/local/lib/ -lqrencode
+    LIBS += -L/usr/local/Cellar/qrencode/4.0.0/lib/ -lqrencode
+#    LIBS += -l/usr/local/lib/libqrencode.dylib
+#    INCLUDEPATH += "/usr/local/include"
+    INCLUDEPATH += "/usr/local/Cellar/qrencode/4.0.0/include"
+#    DEPENDPATH += "/usr/local/include"
+    DEPENDPATH += "/usr/local/Cellar/qrencode/4.0.0/include"
+}
+# win32 {
+#}

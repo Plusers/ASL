@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-//    showDemo();
+    showDemo();
     showQrEncode();
 
 }
@@ -82,12 +82,15 @@ void MainWindow::on_pushButton_8_clicked()
 
 void MainWindow::showDemo() {
     // Demo on storage model
-    auto priceModel = new StorageModel("./productModel.csv");
+    // сперва создаём модель и заполняем метаданные
+    auto priceModel = new StorageModel();
     priceModel->setObjectName("poductModel");
     priceModel->setTitle("Модель списка товаров");
     QStringList headers = { "Name", "Count", "Price"};
     priceModel->setHeaderData(headers);
-    // это чтобы добавить одну строку в конец
+    priceModel->setFileName("./productModel.csv");
+
+    // добавляем одну строку в конец
     priceModel->insertRow(priceModel->rowCount());
     // произвольное количество в конец
     priceModel->insertRows(priceModel->rowCount(), 3);
@@ -131,7 +134,7 @@ void MainWindow::showDemo() {
     dialog.setSizeGripEnabled(true);
 
     auto priceView = new QTableView(&dialog);
-    priceView->setModel(priceModel.get());
+    priceView->setModel(priceModel);
 
     auto buttons = new QDialogButtonBox(QDialogButtonBox::Ok, &dialog);
     connect(buttons, &QDialogButtonBox::accepted, &dialog, &QDialog::accept);
