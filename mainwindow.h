@@ -34,6 +34,8 @@ private slots:
 private: // functions
     void showDemo();
     void showQrEncode();
+    void restPull();
+    void  delay(int s);
 private: // members
     Ui::MainWindow *ui;
 };

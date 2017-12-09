@@ -13,6 +13,10 @@
 #include <QDialogButtonBox>
 #include <QTableView>
 #include <QMessageBox>
+#include <QUrlQuery>
+#include <QNetworkRequest>
+#include <QNetworkReply>
+#include <QNetworkAccessManager>
 
 #include <qrwidget.h>
 
@@ -21,9 +25,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    showDemo();
-    showQrEncode();
-
+//    showDemo();
+//    showQrEncode();
+    restPull();
 }
 
 MainWindow::~MainWindow()
@@ -154,8 +158,51 @@ void MainWindow::showDemo() {
     dialog.exec();
 }
 
-void MainWindow::showQrEncode() {
-    QDialog dial(this);
-    auto qrwid = new QRWidget(&dial);
-    dial.exec();
+//void MainWindow::showQrEncode() {
+//    QDialog dial(this);
+//    auto qrwid = new QRWidget(&dial);
+//    dial.exec();
+//}
+
+void MainWindow::restPull() {
+    QString message;
+
+    QNetworkAccessManager *manager = new QNetworkAccessManager(this);
+//    connect(manager, SIGNAL(finished(QNetworkReply*)),
+//            this, SLOT(replyFinished(QNetworkReply*)));
+
+    QNetworkReply *reply = manager->get(QNetworkRequest(QUrl("https://api.github.com/repos/jieter/django-tables2")));
+    delay(3);
+    message = reply->readAll();
+
+//    QUrlQuery query;
+//    query.addQueryItem("username", username);
+//    query.addQueryItem("password", password);
+
+//    QNetworkRequest request(QUrl(serverUrl + "api/v1/auth"));
+//    request.setHeader(QNetworkRequest::ContentTypeHeader,
+//                             "application/x-www-form-urlencoded");
+
+//    auto reply = nam->post(request, query.toString(QUrl::FullyEncoded).toUtf8());
+//    connect(reply, static_cast<void(QNetworkReply::*)(QNetworkReply::NetworkError)>(&QNetworkReply::error),
+//            this, &CustomerApp::handleReplyErrors);
+//    // TODO handle sslErrors
+//    connect(reply, &QNetworkReply::finished,
+//            [this, reply] () {
+//                auto status = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+////                if(std::trunc(status / 100) != 2.0)
+////                    throw QString("Unintended server response");
+//                auto json = QJsonDocument::fromJson(reply->readAll()).object();
+//                token = json.value("token").toString();
+//                reply->deleteLater();
+//                emit authenticated();
+//            } );
+
+    QMessageBox::information(this, "Demo message", message);
+}
+
+void MainWindow::delay(int s) {
+    QTime dieTime= QTime::currentTime().addSecs(s);
+    while (QTime::currentTime() < dieTime)
+        QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
 }
