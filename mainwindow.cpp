@@ -14,15 +14,15 @@
 #include <QTableView>
 #include <QMessageBox>
 
-#include <qrwidget.h>
+//#include <qrwidget.h>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    showDemo();
-    showQrEncode();
+//    showDemo();
+//    showQrEncode();
 
 }
 
@@ -154,8 +154,8 @@ void MainWindow::showDemo() {
     dialog.exec();
 }
 
-void MainWindow::showQrEncode() {
-    QDialog dial(this);
-    auto qrwid = new QRWidget(&dial);
-    dial.exec();
-}
+//void MainWindow::showQrEncode() {
+//    QDialog dial(this);
+//    auto qrwid = new QRWidget(&dial);
+//    dial.exec();
+//}

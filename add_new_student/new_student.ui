@@ -22,21 +22,21 @@
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="lineEdit">
+    <widget class="QLineEdit" name="form">
      <property name="text">
       <string>класс</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="lineEdit_2">
+    <widget class="QLineEdit" name="dateofbirth">
      <property name="text">
       <string>день рождения</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="lineEdit_3">
+    <widget class="QLineEdit" name="monthofbirth">
      <property name="text">
       <string>месяц рождения</string>
      </property>

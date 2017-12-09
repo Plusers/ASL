@@ -7,6 +7,12 @@ StorageModel::StorageModel(const QString modelFilename)
         : filePath (modelFilename) {
     if(filePath == "") return;
     QFile file(filePath);
+    if(!file.exists()) {
+        if(!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+            throw Service::ErrOpenFile.arg(file.fileName());
+        }
+        return;
+    }
     if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
         throw Service::ErrOpenFile.arg(file.fileName());
     QTextStream in(&file);

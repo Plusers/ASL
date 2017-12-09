@@ -44,7 +44,7 @@ SOURCES += \
     models/stringtablemodel.cpp \
     models/storagemodel.cpp \
     models/service.cpp \
-    qrwidget.cpp
+#    qrwidget.cpp
 
 HEADERS += \
     mainwindow.h \
@@ -62,7 +62,7 @@ HEADERS += \
     models/stringtablemodel.h \
     models/storagemodel.h \
     models/service.h \
-    qrwidget.h \
+#    qrwidget.h \
 
 FORMS += \
     mainwindow.ui \
