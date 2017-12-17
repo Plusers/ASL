@@ -16,8 +16,10 @@ public:
     ~New_student();
     void showDemo();
 
+
 private slots:
     void on_pushButton_clicked();
+    void on_pushButton_3_clicked();
 
 private:
     Ui::New_student *ui;

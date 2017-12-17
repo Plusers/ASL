@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>300</width>
-    <height>335</height>
+    <width>461</width>
+    <height>399</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,33 +24,40 @@
    <item>
     <widget class="QLineEdit" name="form">
      <property name="text">
-      <string>класс</string>
+      <string>имя</string>
      </property>
     </widget>
    </item>
    <item>
     <widget class="QLineEdit" name="dateofbirth">
      <property name="text">
-      <string>день рождения</string>
+      <string>фамилия</string>
      </property>
     </widget>
    </item>
    <item>
     <widget class="QLineEdit" name="monthofbirth">
      <property name="text">
-      <string>месяц рождения</string>
+      <string>класс</string>
      </property>
     </widget>
    </item>
    <item>
     <widget class="QLabel" name="label_2">
      <property name="text">
-      <string>ваш ID-10.12.14.000</string>
+      <string/>
      </property>
     </widget>
    </item>
    <item>
     <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>получить ID</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButton_3">
      <property name="text">
       <string>ГОТОВО</string>
      </property>
