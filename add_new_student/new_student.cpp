@@ -36,7 +36,7 @@ void New_student::on_pushButton_clicked(){
    student->setData(student->rowCount()-1 ,2,ui->monthofbirth->text());
 
    //QString::number (student->rowCount());
-   student->setData(student->rowCount() ,3,QString::number (student->rowCount()));
+   student->setData(student->rowCount()-1 ,3,QString::number (student->rowCount()));
    student->saveToDisk();
    QMessageBox msgBox;
    // QString message = add_student->data(0, 0);
