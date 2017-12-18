@@ -31,9 +31,9 @@ void New_student::on_pushButton_clicked(){
    student->setFileName("./new_student.csv");
    student->insertRow(student->rowCount());
    student->insertRow(student->rowCount());
-   student->setData(student->rowCount(), 0, ui->form->text());
-   student->setData(student->rowCount(), 1,ui->dateofbirth->text());
-   student->setData(student->rowCount() ,2,ui->monthofbirth->text());
+   student->setData(student->rowCount()-1, 0, ui->form->text());
+   student->setData(student->rowCount()-1, 1,ui->dateofbirth->text());
+   student->setData(student->rowCount()-1 ,2,ui->monthofbirth->text());
 
    //QString::number (student->rowCount());
    student->setData(student->rowCount() ,3,QString::number (student->rowCount()));
