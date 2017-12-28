@@ -6,7 +6,8 @@
 #include <QDialogButtonBox>
 #include <QTableView>
 #include <QMessageBox>
-
+#include<QString>>
+#include<QStringList>
 New_student::New_student(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::New_student)
@@ -31,13 +32,39 @@ void New_student::on_pushButton_clicked(){
    student->setFileName("./new_student.csv");
    student->insertRow(student->rowCount());
    student->insertRow(student->rowCount());
-   student->setData(student->rowCount()-1, 0, ui->form->text());
-   student->setData(student->rowCount()-1, 1,ui->dateofbirth->text());
-   student->setData(student->rowCount()-1 ,2,ui->monthofbirth->text());
+
+   int i=0;
+   if(student->data(0,"NUMBER")==" "){
+       student->setData(0, 0, ui->form->text());
+       student->setData(0, 1,ui->dateofbirth->text());
+       student->setData(0 ,2,ui->monthofbirth->text());
+       student->setData(0,3,QString::number(i++));
+       student->saveToDisk();
+   }
+   else
+   {
+   QString abcd;
+   abcd=student->data(i,"NUMBER");
+   abcd.toInt();
+   //int y = abcd;
+   while (i!= abcd){
+       ++i;
+
+   }
+   student->setData(i, 0, ui->form->text());
+   student->setData(i, 1,ui->dateofbirth->text());
+   student->setData(i ,2,ui->monthofbirth->text());
+   student->setData(i,3,QString::number(i++));
+   student->saveToDisk();
+       //student->setData(i,0,ui->form->text());
+
+};
+
 
    //QString::number (student->rowCount());
-   student->setData(student->rowCount()-1 ,3,QString::number (student->rowCount()));
-   student->saveToDisk();
+   i++;
+
+
    QMessageBox msgBox;
    // QString message = add_student->data(0, 0);
     //message.append(" -класс ");
@@ -73,18 +100,18 @@ void New_student::on_pushButton_clicked(){
       //msgBox.setText(ui->form->text());
       //msgBox.exec();
     //student->saveToDisk();
-    QString message = student->data(student->rowCount(),0);
+    QString message = student->data(i,0);
     message.append(" name ");
     // а также по имени столбца
-    message.append(student->data(student->rowCount(),1));
+    message.append(student->data(i,1));
     message.append(" second name ");
-    message.append(student->data(student->rowCount(),2));
+    message.append(student->data(i,2));
     message.append(" form ");
-    message.append(QString::number(student->rowCount() ));
+    message.append(QString::number(++i));
     message.append(" ID ");
     QMessageBox::information(this, "Demo message", message);
    //ui->label_2->setText("your ID:"+student->data(student->rowCount()-1,0)+'.'+student->data(student->rowCount()-1,1)+'.'+student->data(student->rowCount()-1,2)+'.'+student->data(student->rowCount()-1,3));
-   ui->label_2->setText( student->data (student->rowCount()-1,3));
+   ui->label_2->setText( student->data (i,3));
      //accept();
  }
 
