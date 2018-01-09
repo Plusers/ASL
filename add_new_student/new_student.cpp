@@ -23,45 +23,41 @@ New_student::~New_student()
 //{
     //accept();
 //}
-void New_student::on_pushButton_clicked(){
-   auto student = new StorageModel();
+void New_student::on_pushButton_clicked() {
+   auto student = new StorageModel("./new_student.csv");
    student->setObjectName("students");
    student->setTitle("Список учеников");
    QStringList headers = { "first name", "second name ", "form","NUMBER"};
    student->setHeaderData(headers);
-   student->setFileName("./new_student.csv");
+//   student->setFileName("./new_student.csv");
    student->insertRow(student->rowCount());
-   student->insertRow(student->rowCount());
+   //student->insertRow(student->rowCount());
 
    int i=0;
-   if(student->data(0,"NUMBER")==" "){
-       student->setData(0, 0, ui->form->text());
-       student->setData(0, 1,ui->dateofbirth->text());
-       student->setData(0 ,2,ui->monthofbirth->text());
-       student->setData(0,3,QString::number(i++));
-       student->saveToDisk();
-   }
-   else
-   {
-   QString abcd;
-   abcd=student->data(i,"NUMBER");
-   abcd.toInt();
-   //int y = abcd;
-   while (i!= abcd){
-       ++i;
+//   if(student->data(0, "NUMBER") == "") {
+//       student->setData(i, 0, ui->form->text());
+//       student->setData(i, 1,ui->dateofbirth->text());
+//       student->setData(i ,2,ui->monthofbirth->text());
+//       student->setData(i,3,QString::number(i++));
+//       student->saveToDisk();
+//   } else {
+//       QString abcd;
+//       abcd=student->data(i,"NUMBER");
+//       //abcd.toInt();
+//       int y = abcd.toInt();
+//       i = y + 1;
+//
+//       //student->setData(i,0,ui->form->text());
 
-   }
-   student->setData(i, 0, ui->form->text());
-   student->setData(i, 1,ui->dateofbirth->text());
-   student->setData(i ,2,ui->monthofbirth->text());
-   student->setData(i,3,QString::number(i++));
-   student->saveToDisk();
-       //student->setData(i,0,ui->form->text());
+//};
+   auto row = student->rowCount()-1;
+    student->setData(row, 0, ui->form->text());
+    student->setData(student->rowCount()-1, 1, ui->dateofbirth->text());
+    student->setData(student->rowCount()-1 ,2, ui->monthofbirth->text());
+    student->setData(student->rowCount()-1, 3, QString::number (student->rowCount()));
+    student->saveToDisk();
 
-};
-
-
-   //QString::number (student->rowCount());
+   //
    i++;
 
 
@@ -93,7 +89,7 @@ void New_student::on_pushButton_clicked(){
     dialog.setLayout(layout);
     dialog.resize(400, 200);
 
-//    dialog.exec();
+    dialog.exec();
      //add_student->setData(0, 0, "Хлеб");
 //QMessageBox msgBox;
     //ui->lineEdit->text()

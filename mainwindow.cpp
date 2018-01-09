@@ -83,12 +83,12 @@ void MainWindow::on_pushButton_8_clicked()
 void MainWindow::showDemo() {
     // Demo on storage model
     // сперва создаём модель и заполняем метаданные
-    auto priceModel = new StorageModel();
+    auto priceModel = new StorageModel("./productModel.csv");
     priceModel->setObjectName("poductModel");
     priceModel->setTitle("Модель списка товаров");
     QStringList headers = { "Name", "Count", "Price"};
     priceModel->setHeaderData(headers);
-    priceModel->setFileName("./productModel.csv");
+//    priceModel->setFileName("./productModel.csv");
 
     // добавляем одну строку в конец
     priceModel->insertRow(priceModel->rowCount());
