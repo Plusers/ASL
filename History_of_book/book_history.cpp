@@ -1,6 +1,6 @@
 #include "History_of_book/book_history.h"
 #include "ui_book_history.h"
-#include "History_of_book/book_history_end.h"
+//#include "History_of_book/book_history_end.h"
 Book_history::Book_history(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Book_history)
@@ -15,7 +15,6 @@ Book_history::~Book_history()
 
 void Book_history::on_pushButton_clicked()
 {
-    auto hb1 = new Book_history_end(this);
-    hb1->exec();
+
     accept();
 }

@@ -24,46 +24,23 @@ New_student::~New_student()
     //accept();
 //}
 void New_student::on_pushButton_clicked(){
-   auto student = new StorageModel();
+   auto student = new StorageModel("./new_student.csv");
    student->setObjectName("students");
    student->setTitle("Список учеников");
    QStringList headers = { "first name", "second name ", "form","NUMBER"};
    student->setHeaderData(headers);
-   student->setFileName("./new_student.csv");
+  // student->setFileName();
    student->insertRow(student->rowCount());
-   student->insertRow(student->rowCount());
-
-   int i=0;
-   if(student->data(0,"NUMBER")==" "){
-       student->setData(0, 0, ui->form->text());
-       student->setData(0, 1,ui->dateofbirth->text());
-       student->setData(0 ,2,ui->monthofbirth->text());
-       student->setData(0,3,QString::number(i++));
-       student->saveToDisk();
-   }
-   else
-   {
-   QString abcd;
-   abcd=student->data(i,"NUMBER");
-   abcd.toInt();
-   //int y = abcd;
-   while (i!= abcd){
-       ++i;
-
-   }
-   student->setData(i, 0, ui->form->text());
-   student->setData(i, 1,ui->dateofbirth->text());
-   student->setData(i ,2,ui->monthofbirth->text());
-   student->setData(i,3,QString::number(i++));
-   student->saveToDisk();
-       //student->setData(i,0,ui->form->text());
-
-};
 
 
    //QString::number (student->rowCount());
-   i++;
-
+   //i++;
+   auto row = student->rowCount()-1;
+       student->setData(row, 0, ui->form->text());
+       student->setData(student->rowCount()-1, 1, ui->dateofbirth->text());
+       student->setData(student->rowCount()-1 ,2, ui->monthofbirth->text());
+       student->setData(student->rowCount()-1, 3, QString::number (student->rowCount()));
+       student->saveToDisk();
 
    QMessageBox msgBox;
    // QString message = add_student->data(0, 0);
@@ -84,8 +61,8 @@ void New_student::on_pushButton_clicked(){
     connect(buttons, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
 
     //auto students1 = new QTableView(&dialog);
-//    priceView->setModel(priceModel.get());
-    //students1->setModel(students);
+    //priceView->setModel(priceModel.get());
+   // students1->setModel(students);
 
     auto layout = new QVBoxLayout(&dialog);
     layout->addWidget(students1);
@@ -93,28 +70,33 @@ void New_student::on_pushButton_clicked(){
     dialog.setLayout(layout);
     dialog.resize(400, 200);
 
-//    dialog.exec();
+   dialog.exec();
      //add_student->setData(0, 0, "Хлеб");
 //QMessageBox msgBox;
     //ui->lineEdit->text()
       //msgBox.setText(ui->form->text());
       //msgBox.exec();
     //student->saveToDisk();
-    QString message = student->data(i,0);
-    message.append(" name ");
+    //QString message = student->data(i,0);
+    //message.append(" name ");
     // а также по имени столбца
-    message.append(student->data(i,1));
-    message.append(" second name ");
-    message.append(student->data(i,2));
-    message.append(" form ");
-    message.append(QString::number(++i));
-    message.append(" ID ");
-    QMessageBox::information(this, "Demo message", message);
+   // message.append(student->data(i,1));
+    //message.append(" second name ");
+    //message.append(student->data(i,2));
+   // message.append(" form ");
+    //message.append(QString::number(++i));
+   // message.append(" ID ");
+    //QMessageBox::information(this, "Demo message", message);
    //ui->label_2->setText("your ID:"+student->data(student->rowCount()-1,0)+'.'+student->data(student->rowCount()-1,1)+'.'+student->data(student->rowCount()-1,2)+'.'+student->data(student->rowCount()-1,3));
-   ui->label_2->setText( student->data (i,3));
+   ui->label_2->setText( "Ваш ID:"+student->data(row,3));
      //accept();
  }
 
-void New_student::on_pushButton_3_clicked(){
+//void New_student::on_pushButton_3_clicked(){
+  //  accept();
+//}
+
+void New_student::on_pushButton_3_clicked()
+{
     accept();
 }
