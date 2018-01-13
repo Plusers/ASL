@@ -19,49 +19,49 @@
      <item>
       <widget class="QLineEdit" name="lineEdit">
        <property name="text">
-        <string>Автор</string>
+        <string/>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLineEdit" name="lineEdit_3">
        <property name="text">
-        <string>Предмет/Название</string>
+        <string/>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLineEdit" name="lineEdit_4">
        <property name="text">
-        <string>издание</string>
+        <string/>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLineEdit" name="lineEdit_5">
        <property name="text">
-        <string>издатель</string>
+        <string/>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLineEdit" name="lineEdit_2">
        <property name="text">
-        <string>год издания</string>
+        <string/>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLineEdit" name="lineEdit_7">
        <property name="text">
-        <string>класс</string>
+        <string/>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLineEdit" name="lineEdit_6">
        <property name="text">
-        <string>количество</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -79,9 +79,24 @@
        </property>
       </widget>
      </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>В меню</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
   </layout>
+  <action name="Add_book_start_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>!!!!</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

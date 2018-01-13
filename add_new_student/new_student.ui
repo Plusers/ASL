@@ -24,21 +24,21 @@
    <item>
     <widget class="QLineEdit" name="form">
      <property name="text">
-      <string>имя</string>
+      <string/>
      </property>
     </widget>
    </item>
    <item>
     <widget class="QLineEdit" name="dateofbirth">
      <property name="text">
-      <string>фамилия</string>
+      <string/>
      </property>
     </widget>
    </item>
    <item>
     <widget class="QLineEdit" name="monthofbirth">
      <property name="text">
-      <string>класс</string>
+      <string/>
      </property>
     </widget>
    </item>

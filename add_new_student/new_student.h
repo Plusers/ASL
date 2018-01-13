@@ -15,12 +15,12 @@ public:
     explicit New_student(QWidget *parent = 0);
     ~New_student();
     void showDemo();
-
+    int exec(void);
 
 private slots:
     void on_pushButton_clicked();
     //void on_pushButton_3]_clicked();
-
+    void setPlaceholderText(const QString &);
     void on_pushButton_3_clicked();
 
 private:

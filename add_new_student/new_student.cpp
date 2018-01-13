@@ -19,6 +19,22 @@ New_student::~New_student()
 {
     delete ui;
 }
+int New_student::exec(void){
+
+    int r=0;
+    //ui->label->setText("Problem");
+    setPlaceholderText("123");
+    r=QDialog::exec();
+
+    return r;
+};
+void New_student::setPlaceholderText(const QString&  ){
+       ui->form->setPlaceholderText(QString("Имя"));
+       ui->dateofbirth->setPlaceholderText(QString("Фамилия"));
+       ui->monthofbirth->setPlaceholderText(QString("Класс"));
+
+
+}
 //void New_student::on_pushButton_clicked()
 //{
     //accept();
