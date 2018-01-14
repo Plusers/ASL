@@ -88,11 +88,11 @@ ui->label->setText("Артикул : "+QString::number(books->rowCount()));
     //accept();
 }
 void Add_book_start::setPlaceholderText(const QString&  ){
-       ui->lineEdit->setPlaceholderText(QString("Автор"));
-       ui->lineEdit_2->setPlaceholderText(QString("Издатель"));
-       ui->lineEdit_3->setPlaceholderText(QString("Название/Предемет"));
-       ui->lineEdit_4->setPlaceholderText(QString("Издание"));
-       ui->lineEdit_5->setPlaceholderText(QString("Год издания"));
+       ui->lineEdit->setPlaceholderText(QString("Автор(В.В.Виленкин)"));
+       ui->lineEdit_4->setPlaceholderText(QString("Издатель(дрофа/вентана-граф и т.д."));
+       ui->lineEdit_5->setPlaceholderText(QString("Название/Предемет"));
+       ui->lineEdit_3->setPlaceholderText(QString("Издание"));
+       ui->lineEdit_2->setPlaceholderText(QString("Год издания"));
        ui->lineEdit_6->setPlaceholderText(QString("Количество"));
        ui->lineEdit_7->setPlaceholderText(QString("Класс"));
 

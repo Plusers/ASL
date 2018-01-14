@@ -106,6 +106,9 @@ void New_student::on_pushButton_clicked(){
    //ui->label_2->setText("your ID:"+student->data(student->rowCount()-1,0)+'.'+student->data(student->rowCount()-1,1)+'.'+student->data(student->rowCount()-1,2)+'.'+student->data(student->rowCount()-1,3));
    ui->label_2->setText( "Ваш ID:"+student->data(row,3));
      //accept();
+   ui->form->setText("");
+   ui->dateofbirth->setText("");
+   ui->monthofbirth->setText("");
  }
 
 //void New_student::on_pushButton_3_clicked(){
