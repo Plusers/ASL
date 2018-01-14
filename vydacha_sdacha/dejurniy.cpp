@@ -12,7 +12,14 @@ Dejurniy::~Dejurniy()
 {
     delete ui;
 }
+int Dejurniy::exec(void){
+    int r=0;
+    //ui->label->setText("Problem");
+   ui->lineEdit->setPlaceholderText("Фио дежурнуго");
+    r=QDialog::exec();
 
+    return r;
+}
 void Dejurniy::on_pushButton_clicked()
 {
     auto vvod = new Vvod_ID (this);

@@ -12,7 +12,15 @@ QR_code_unread::~QR_code_unread()
 {
     delete ui;
 }
+int QR_code_unread::exec(void){
+    int r=0;
+    //ui->label->setText("Problem");
+   ui->lineEdit->setPlaceholderText("Введите Артикул книги");
+   ui->lineEdit_2->setPlaceholderText("Количество");
+    r=QDialog::exec();
 
+    return r;
+}
 void QR_code_unread::on_pushButton_clicked()
 {
     accept();

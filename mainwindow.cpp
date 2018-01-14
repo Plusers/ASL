@@ -36,7 +36,7 @@ void MainWindow::on_pushButton_clicked()
     auto dej = new Dejurniy(this);
     dej->exec();
 }
-
+//void QWidget::setWindowTitle(const QString &)
 
 void MainWindow::on_pushButton_2_clicked()
 {

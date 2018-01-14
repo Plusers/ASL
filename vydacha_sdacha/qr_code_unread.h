@@ -14,7 +14,7 @@ class QR_code_unread : public QDialog
 public:
     explicit QR_code_unread(QWidget *parent = 0);
     ~QR_code_unread();
-
+  int exec(void);
 private slots:
     void on_pushButton_clicked();
 

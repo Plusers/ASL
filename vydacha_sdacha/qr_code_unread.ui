@@ -17,14 +17,14 @@
    <item>
     <widget class="QLineEdit" name="lineEdit">
      <property name="text">
-      <string>введите полное название книги</string>
+      <string/>
      </property>
     </widget>
    </item>
    <item>
     <widget class="QLineEdit" name="lineEdit_2">
      <property name="text">
-      <string>количество</string>
+      <string/>
      </property>
     </widget>
    </item>

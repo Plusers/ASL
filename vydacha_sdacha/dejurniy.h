@@ -14,7 +14,7 @@ class Dejurniy : public QDialog
 public:
     explicit Dejurniy(QWidget *parent = 0);
     ~Dejurniy();
-
+int exec(void);
 private slots:
     void on_pushButton_clicked();
 

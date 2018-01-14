@@ -14,7 +14,7 @@ class Vvod_ID : public QDialog
 public:
     explicit Vvod_ID(QWidget *parent = 0);
     ~Vvod_ID();
-
+    int exec(void);
 private slots:
     void on_pushButton_clicked();
 

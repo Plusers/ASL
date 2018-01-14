@@ -17,7 +17,7 @@
    <item>
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>введите ID ученика</string>
+      <string/>
      </property>
     </widget>
    </item>
@@ -27,7 +27,7 @@
    <item>
     <widget class="QLabel" name="label_2">
      <property name="text">
-      <string>введите количество выдаваемых(сдаваемых) книг</string>
+      <string/>
      </property>
     </widget>
    </item>
