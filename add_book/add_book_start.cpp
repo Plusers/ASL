@@ -42,7 +42,12 @@ void Add_book_start::on_pushButton_clicked()
  //books->setFileName("./new_book.csv");
 
 
-    books->insertRow(books->rowCount());
+    //books->insertRow(books->rowCount());
+    QString count_1;
+    count_1=ui->count->text();
+    count_1.toInt();
+
+
    // ui->lineEdit->setPlaceholderText(QString("Автор"));
    // ui->lineEdit_2->setPlaceholderText(QString("Издатель"));
    // ui->lineEdit_3->setPlaceholderText(QString("Название/Предемет"));
@@ -51,18 +56,31 @@ void Add_book_start::on_pushButton_clicked()
    // ui->lineEdit_6->setPlaceholderText(QString("Количество"));
    // ui->lineEdit_7->setPlaceholderText(QString("Класс"));
     auto row = books->rowCount()-1;
-        books->setData(row, 0, ui->lineEdit->text());
-        books->setData(row, 1, ui->lineEdit_3->text());
-        books->setData(row, 2, ui->lineEdit_4->text());
-        books->setData(row, 3, ui->lineEdit_5->text());
-        books->setData(row, 4, ui->lineEdit_2->text());
-        books->setData(row, 5, ui->lineEdit_7->text());
-        books->setData(row, 6, ui->lineEdit_6->text());
-        books->setData(row, 7, QString::number(books->rowCount()));
+    //auto roww = books->rowCount()-1
+;
+        //int i=1;
+        if (count_1.toInt()>0){
+
+            for(int i=0;i<count_1.toInt();i++){
+                books->insertRow(books->rowCount());
+                books->setData(row+i, 0, ui->author->text());
+                books->setData(row+i, 1, ui->name->text());
+                books->setData(row+i, 2, ui->izdanie->text());
+                books->setData(row+i, 3, ui->izdatel->text());
+                books->setData(row+i, 4, ui->godizdania->text());
+                books->setData(row+i, 5, ui->form->text());
+
+        books->setData(row + i, 6, "1");
+                books->setData(row + i, 7,QString::number(books->rowCount()+i));
+       // ui->label->setText(" Артикул "+(num+i)+" ");
+            };
+
+        };
+
         books->saveToDisk();
 
 
-    books->saveToDisk();
+   // books->saveToDisk();
 
 
     QDialog dialog(this);
@@ -84,17 +102,17 @@ void Add_book_start::on_pushButton_clicked()
     dialog.resize(400, 200);
 //ui->label->setText("Книга успешно добавлена."+books->data(row,6));
     dialog.exec();
-ui->label->setText("Артикул : "+QString::number(books->rowCount()));
+//ui->label->setText("Артикул : "+QString::number(books->rowCount()));
     //accept();
 }
 void Add_book_start::setPlaceholderText(const QString&  ){
-       ui->lineEdit->setPlaceholderText(QString("Автор(В.В.Виленкин)"));
-       ui->lineEdit_4->setPlaceholderText(QString("Издатель(дрофа/вентана-граф и т.д."));
-       ui->lineEdit_5->setPlaceholderText(QString("Название/Предемет"));
-       ui->lineEdit_3->setPlaceholderText(QString("Издание"));
-       ui->lineEdit_2->setPlaceholderText(QString("Год издания"));
-       ui->lineEdit_6->setPlaceholderText(QString("Количество"));
-       ui->lineEdit_7->setPlaceholderText(QString("Класс"));
+       ui->author->setPlaceholderText(QString("Автор(В.В.Виленкин)"));
+       ui->izdatel->setPlaceholderText(QString("Издатель(дрофа/вентана-граф и т.д."));
+       ui->name->setPlaceholderText(QString("Название/Предемет"));
+       ui->izdanie->setPlaceholderText(QString("Издание"));
+       ui->godizdania->setPlaceholderText(QString("Год издания"));
+       ui->count->setPlaceholderText(QString("Количество"));
+       ui->form->setPlaceholderText(QString("Класс"));
 
 }
 
@@ -105,10 +123,10 @@ void Add_book_start::on_pushButton_2_clicked()
 
 void Add_book_start::on_lineEdit_textEdited(const QString &)
 {
-    ui->lineEdit->setPlaceholderText(QString("Автор"));
+    //ui->lineEdit->setPlaceholderText(QString("Автор"));
 }
 
 void Add_book_start::on_Add_book_start_2_changed()
 {
-    ui->lineEdit->setPlaceholderText(QString("Автор"));
+    //ui->lineEdit->setPlaceholderText(QString("Автор"));
 }
