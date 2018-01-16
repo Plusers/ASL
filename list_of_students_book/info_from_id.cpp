@@ -13,6 +13,8 @@ Info_from_ID::~Info_from_ID()
     delete ui;
 }
 
+
+
 void Info_from_ID::on_pushButton_clicked()
 {
     accept();

@@ -45,7 +45,7 @@ void Add_book_start::on_pushButton_clicked()
     //books->insertRow(books->rowCount());
     QString count_1;
     count_1=ui->count->text();
-    count_1.toInt();
+    //count_1.toInt();
 
 
    // ui->lineEdit->setPlaceholderText(QString("Автор"));
@@ -71,7 +71,7 @@ void Add_book_start::on_pushButton_clicked()
                 books->setData(row+i, 5, ui->form->text());
 
         books->setData(row + i, 6, "1");
-                books->setData(row + i, 7,QString::number(books->rowCount()+i));
+                books->setData(row + i, 7,QString::number(books->rowCount()));
        // ui->label->setText(" Артикул "+(num+i)+" ");
             };
 
