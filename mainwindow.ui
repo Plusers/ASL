@@ -457,14 +457,14 @@
         <item>
          <widget class="QPushButton" name="pushButton_5">
           <property name="text">
-           <string>новый ученик</string>
+           <string>Новый ученик</string>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QPushButton" name="pushButton_6">
           <property name="text">
-           <string>история книги</string>
+           <string>История книги</string>
           </property>
          </widget>
         </item>
@@ -886,7 +886,7 @@
            </palette>
           </property>
           <property name="text">
-           <string>список книг ученика</string>
+           <string>Список книг ученика</string>
           </property>
           <property name="default">
            <bool>false</bool>
@@ -1318,28 +1318,28 @@
            </palette>
           </property>
           <property name="text">
-           <string>сдача книг</string>
+           <string>Сдача книг</string>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QPushButton" name="pushButton_3">
           <property name="text">
-           <string>добавление книги</string>
+           <string>Добавление книги</string>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QPushButton" name="pushButton_7">
           <property name="text">
-           <string>распечатать QR-код</string>
+           <string>Распечатать QR-код</string>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QPushButton" name="pushButton_8">
           <property name="text">
-           <string>выход</string>
+           <string>Выход</string>
           </property>
          </widget>
         </item>
@@ -1347,33 +1347,22 @@
       </item>
      </layout>
     </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="text">
+       <string>loadImage</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>435</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menu">
-    <property name="title">
-     <string>меню</string>
-    </property>
-   </widget>
-   <addaction name="menu"/>
-  </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-  </widget>
-  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

@@ -6,7 +6,8 @@
 #include <QDialogButtonBox>
 #include <QTableView>
 #include <QMessageBox>
-#include<QString>>
+#include<QString>
+#include <QVBoxLayout>
 #include<QStringList>
 New_student::New_student(QWidget *parent) :
     QDialog(parent),

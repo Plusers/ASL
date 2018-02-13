@@ -57,22 +57,23 @@ void Add_book_start::on_pushButton_clicked()
    // ui->lineEdit_7->setPlaceholderText(QString("Класс"));
     auto row = books->rowCount()-1;
     //auto roww = books->rowCount()-1
-;
+
+
+
         //int i=1;
-        if (count_1.toInt()>0){
+        if (count_1.toInt() > 0){
 
             for(int i=0;i<count_1.toInt();i++){
-                books->insertRow(books->rowCount());
+                books->insertRow(books->rowCount() );
                 books->setData(row+i, 0, ui->author->text());
                 books->setData(row+i, 1, ui->name->text());
                 books->setData(row+i, 2, ui->izdanie->text());
                 books->setData(row+i, 3, ui->izdatel->text());
                 books->setData(row+i, 4, ui->godizdania->text());
                 books->setData(row+i, 5, ui->form->text());
+                books->setData(row + i, 6, "1");
+                books->setData(row + i , 7,QString::number(books->rowCount()));
 
-        books->setData(row + i, 6, "1");
-                books->setData(row + i, 7,QString::number(books->rowCount()));
-       // ui->label->setText(" Артикул "+(num+i)+" ");
             };
 
         };
@@ -106,13 +107,13 @@ void Add_book_start::on_pushButton_clicked()
     //accept();
 }
 void Add_book_start::setPlaceholderText(const QString&  ){
-       ui->author->setPlaceholderText(QString("Автор(В.В.Виленкин)"));
-       ui->izdatel->setPlaceholderText(QString("Издатель(дрофа/вентана-граф и т.д."));
-       ui->name->setPlaceholderText(QString("Название/Предемет"));
-       ui->izdanie->setPlaceholderText(QString("Издание"));
-       ui->godizdania->setPlaceholderText(QString("Год издания"));
+       ui->author->setPlaceholderText(QString("Автор (В.В.Виленкин)"));
+       ui->izdatel->setPlaceholderText(QString("Издатель (Дрофа/Вентана-граф и т.д."));
+       ui->name->setPlaceholderText(QString("Название/Предемет(Химия)"));
+       ui->izdanie->setPlaceholderText(QString("Издание (2-е дополнительное)" ));
+       ui->godizdania->setPlaceholderText(QString("Год издания (2017)"));
        ui->count->setPlaceholderText(QString("Количество"));
-       ui->form->setPlaceholderText(QString("Класс"));
+       ui->form->setPlaceholderText(QString("Класс (10)"));
 
 }
 

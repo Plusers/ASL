@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui network
 CONFIG   += c++11 c++14
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -45,6 +45,7 @@ SOURCES += \
     models/storagemodel.cpp \
     models/service.cpp \
 #    qrwidget.cpp
+    filedownloader.cpp
 
 HEADERS += \
     mainwindow.h \
@@ -62,6 +63,7 @@ HEADERS += \
     models/storagemodel.h \
     models/service.h \
 #    qrwidget.h \
+    filedownloader.h
 
 FORMS += \
     mainwindow.ui \

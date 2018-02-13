@@ -6,12 +6,13 @@
 #include "add_new_student/new_student.h"
 #include "History_of_book/book_history.h"
 #include "vydacha_sdacha/qr_code_unread.h"
-
 #include "models/storagemodel.h"
+#include "filedownloader.h"
 
 #include <QDialog>
 #include <QDialogButtonBox>
 #include <QTableView>
+#include <QUrl>
 #include <QMessageBox>
 
 //#include <qrwidget.h>
@@ -154,8 +155,23 @@ void MainWindow::showDemo() {
     dialog.exec();
 }
 
+void MainWindow::on_pushButton_9_clicked() {
+    QUrl imageUrl("http://im0-tub-ru.yandex.net/i?id=90e06f63626e518f082b611a0f7e7274&n=13");
+    downloader = new FileDownloader(imageUrl, this);
+    connect(downloader, SIGNAL(downloaded()), this, SLOT(loadImage()));
+}
+
+void MainWindow::loadImage(FileDownloader* downloader){
+    QPixmap buttonImage;
+    buttonImage.loadFromData(downloader->downloadedData());
+    ui->label->setPixmap(buttonImage);
+    buttonImage.save("file.jpg");
+}
+
+
 //void MainWindow::showQrEncode() {
 //    QDialog dial(this);
 //    auto qrwid = new QRWidget(&dial);
 //    dial.exec();
 //}
+
