@@ -35,9 +35,11 @@ private slots:
     void on_pushButton_8_clicked();
 
     void on_pushButton_9_clicked();
+
+    void loadImage();
 private: // functions
     void showDemo();
-    void loadImage(FileDownloader*);
+    //void loadImage(FileDownloader*);
     void showQrEncode();
 private: // members
     Ui::MainWindow *ui;

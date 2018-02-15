@@ -161,7 +161,7 @@ void MainWindow::on_pushButton_9_clicked() {
     connect(downloader, SIGNAL(downloaded()), this, SLOT(loadImage()));
 }
 
-void MainWindow::loadImage(FileDownloader* downloader){
+void MainWindow::loadImage(){
     QPixmap buttonImage;
     buttonImage.loadFromData(downloader->downloadedData());
     ui->label->setPixmap(buttonImage);
