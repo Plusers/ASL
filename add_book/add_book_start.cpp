@@ -59,7 +59,7 @@ void Add_book_start::on_pushButton_clicked()
     //auto roww = books->rowCount()-1
 
 
-
+     //books->setData(0,0,"");
         //int i=1;
         if (count_1.toInt() > 0){
 
@@ -108,7 +108,7 @@ void Add_book_start::on_pushButton_clicked()
 }
 void Add_book_start::setPlaceholderText(const QString&  ){
        ui->author->setPlaceholderText(QString("Автор (В.В.Виленкин)"));
-       ui->izdatel->setPlaceholderText(QString("Издатель (Дрофа/Вентана-граф и т.д."));
+       ui->izdatel->setPlaceholderText(QString("Издатель (Дрофа/Вентана-граф и т.д.)"));
        ui->name->setPlaceholderText(QString("Название/Предемет(Химия)"));
        ui->izdanie->setPlaceholderText(QString("Издание (2-е дополнительное)" ));
        ui->godizdania->setPlaceholderText(QString("Год издания (2017)"));

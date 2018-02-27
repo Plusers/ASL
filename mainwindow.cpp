@@ -156,7 +156,7 @@ void MainWindow::showDemo() {
 }
 
 void MainWindow::on_pushButton_9_clicked() {
-    QUrl imageUrl("http://im0-tub-ru.yandex.net/i?id=90e06f63626e518f082b611a0f7e7274&n=13");
+    QUrl imageUrl("http://qrcoder.ru/code/?%DF+%EB%FE%E1%EB%FE+%F8%EA%EE%EB%F3+IT-%F0%E5%F8%E5%ED%E8%E9%21+%CD%E0+%F1%E0%EC%EE%EC+%E4%E5%EB%E5+%F3+%ED%E0%F1+%ED%E8%F7%E5%E3%EE+%ED%E5%F2%29&4&0");
     downloader = new FileDownloader(imageUrl, this);
     connect(downloader, SIGNAL(downloaded()), this, SLOT(loadImage()));
 }
