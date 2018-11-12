@@ -144,6 +144,9 @@
       </widget>
      </item>
      <item>
+      <widget class="QLineEdit" name="quantity"/>
+     </item>
+     <item>
       <widget class="QPushButton" name="pushButton">
        <property name="text">
         <string>готово</string>

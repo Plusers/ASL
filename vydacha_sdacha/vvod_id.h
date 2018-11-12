@@ -16,7 +16,8 @@ public:
     ~Vvod_ID();
     int exec(void);
 private slots:
-    void on_pushButton_clicked();
+
+    void on_search_button_clicked();
 
 private:
     Ui::Vvod_ID *ui;

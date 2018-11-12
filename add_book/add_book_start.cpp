@@ -37,7 +37,7 @@ void Add_book_start::on_pushButton_clicked()
     auto books = new StorageModel("./new_book.csv");
     books->setObjectName("new_book");
     books->setTitle("new_added_books");
-    QStringList headers = { "Autor", "Name","Edition","Publication","year of edition","form","Count","ID"};
+    QStringList headers = { "Autor", "Name","Edition","Publication","year of edition","form","Count","ID", "Вид"};
     books->setHeaderData(headers);
  //books->setFileName("./new_book.csv");
 
@@ -73,6 +73,7 @@ void Add_book_start::on_pushButton_clicked()
                 books->setData(row+i, 5, ui->form->text());
                 books->setData(row + i, 6, "1");
                 books->setData(row + i , 7,QString::number(books->rowCount()));
+                books->setData(row+i, 8, ui->quantity->text());
 
             };
 
@@ -100,7 +101,7 @@ void Add_book_start::on_pushButton_clicked()
     layout->addWidget(priceView);
     layout->addWidget(buttons);
     dialog.setLayout(layout);
-    dialog.resize(400, 200);
+    dialog.showFullScreen();
 //ui->label->setText("Книга успешно добавлена."+books->data(row,6));
     dialog.exec();
 //ui->label->setText("Артикул : "+QString::number(books->rowCount()));
@@ -114,6 +115,7 @@ void Add_book_start::setPlaceholderText(const QString&  ){
        ui->godizdania->setPlaceholderText(QString("Год издания (2017)"));
        ui->count->setPlaceholderText(QString("Количество"));
        ui->form->setPlaceholderText(QString("Класс (10)"));
+       ui->quantity->setPlaceholderText(QString("(Учебник/Пособие))"));
 
 }
 

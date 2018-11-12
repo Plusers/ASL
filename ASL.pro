@@ -45,7 +45,10 @@ SOURCES += \
     models/storagemodel.cpp \
     models/service.cpp \
 #    qrwidget.cpp
-    filedownloader.cpp
+    filedownloader.cpp \
+    menu.cpp \
+    give_book.cpp \
+    vydacha_sdacha/true_search.cpp
 
 HEADERS += \
     mainwindow.h \
@@ -63,7 +66,10 @@ HEADERS += \
     models/storagemodel.h \
     models/service.h \
 #    qrwidget.h \
-    filedownloader.h
+    filedownloader.h \
+    menu.h \
+    give_book.h \
+    vydacha_sdacha/true_search.h
 
 FORMS += \
     mainwindow.ui \
@@ -78,6 +84,9 @@ FORMS += \
     add_new_student/new_student.ui \
     History_of_book/book_history.ui \
  #   History_of_book/book_history_end.ui
+    menu.ui \
+    give_book.ui \
+    vydacha_sdacha/true_search.ui
 
 DISTFILES += \
     README.md \

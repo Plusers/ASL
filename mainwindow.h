@@ -3,7 +3,6 @@
 
 #include <QMainWindow>
 
-#include "filedownloader.h"
 
 namespace Ui {
 class MainWindow;
@@ -18,32 +17,21 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_clicked();
+  //  void menubutton();
 
-    void on_pushButton_2_clicked();
 
-    void on_pushButton_3_clicked();
+    void on_menubutton_clicked();
 
-    void on_pushButton_4_clicked();
+    void on_exit_button_clicked();
 
-    void on_pushButton_5_clicked();
+    void on_tableView_activated(const QModelIndex &index);
 
-    void on_pushButton_6_clicked();
-
-    void on_pushButton_7_clicked();
-
-    void on_pushButton_8_clicked();
-
-    void on_pushButton_9_clicked();
-
-    void loadImage();
 private: // functions
     void showDemo();
     //void loadImage(FileDownloader*);
     void showQrEncode();
 private: // members
     Ui::MainWindow *ui;
-    FileDownloader* downloader;
 };
 
 #endif // MAINWINDOW_H

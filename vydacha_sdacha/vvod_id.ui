@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>373</width>
-    <height>204</height>
+    <width>414</width>
+    <height>240</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,7 +22,13 @@
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="lineEdit"/>
+    <widget class="QLineEdit" name="name"/>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="fename"/>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="third_name"/>
    </item>
    <item>
     <widget class="QLabel" name="label_2">
@@ -32,10 +38,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="lineEdit_2"/>
-   </item>
-   <item>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="search_button">
      <property name="text">
       <string>ok</string>
      </property>
